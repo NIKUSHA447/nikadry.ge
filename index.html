@@ -3,70 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIKADRY TV | მენიუ</title>
+    <title>NIKADRY TV | სერიალები</title>
     <style>
-        body { 
-            margin: 0; 
-            background: #000; 
-            color: white; 
-            font-family: Arial, sans-serif; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            min-height: 100vh; 
-            text-align: center; 
-        }
-        .container { 
-            border: 2px solid #e50914; 
-            padding: 40px; 
-            border-radius: 20px; 
-            box-shadow: 0 0 30px rgba(229, 9, 20, 0.4); 
-            max-width: 500px; 
-            width: 90%; 
-        }
-        h1 { 
-            font-size: 45px; 
+        body { margin: 0; background: #000; color: white; font-family: 'Segoe UI', sans-serif; padding-bottom: 50px; }
+        header { background: #e50914; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4); }
+        h1 { margin: 0; font-size: clamp(24px, 5vw, 40px); text-transform: uppercase; letter-spacing: 4px; font-weight: 900; }
+        
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        
+        .season-section { margin-bottom: 50px; }
+        .season-title { 
+            font-size: 28px; 
             color: #e50914; 
-            margin-bottom: 30px; 
-            letter-spacing: 2px; 
+            border-left: 5px solid #e50914; 
+            padding-left: 15px; 
+            margin-bottom: 25px; 
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        p { color: #ccc; margin-bottom: 25px; font-size: 18px; }
-        .movie-list { display: flex; flex-direction: column; gap: 15px; }
-        .btn { 
-            display: block; 
-            padding: 15px; 
-            background: #1a1a1a; 
+
+        .episode-card { 
+            background: #141414; 
+            border-radius: 12px; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border: 1px solid #222;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .episode-card:hover { border-color: #e50914; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(229,9,20,0.2); }
+
+        .episode-header { display: flex; justify-content: space-between; align-items: center; }
+        .episode-name { font-size: 20px; font-weight: bold; color: #fff; }
+        
+        .episode-desc { color: #999; font-size: 15px; line-height: 1.5; margin: 5px 0; }
+        
+        .watch-btn { 
+            align-self: flex-start;
+            padding: 10px 25px; 
+            background: #e50914; 
             color: white; 
             text-decoration: none; 
             font-weight: bold; 
-            border-radius: 8px; 
-            border: 1px solid #333;
-            transition: 0.3s;
+            border-radius: 6px; 
+            font-size: 14px;
+            transition: 0.2s;
         }
-        .btn:hover { 
-            background: #e50914; 
-            transform: scale(1.05); 
-            border-color: white; 
-            box-shadow: 0 0 15px rgba(229, 9, 20, 0.8);
-        }
-        .footer { margin-top: 30px; font-size: 12px; color: #555; }
+        .watch-btn:hover { background: #b20710; transform: scale(1.05); }
+
+        .coming-soon { color: #555; font-style: italic; font-size: 14px; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <header>
         <h1>NIKADRY TV</h1>
-        <p>აირჩიე რისი ყურება გინდა:</p>
+    </header>
+
+    <div class="container">
         
-        <div class="movie-list">
-            <a href="cinema.html" class="btn">🎬 დათარსულები (S5 E4)</a>
+        <div class="season-section">
+            <div class="season-title">სეზონი 1</div>
             
-            <a href="cinema2.html" class="btn">🎬 ახალი ფილმი (NEW)</a>
+            <div class="episode-card">
+                <div class="episode-header">
+                    <span class="episode-name">🔵 ეპიზოდი 1: დასაწყისი</span>
+                </div>
+                <p class="episode-desc">
+                    გაიცანით პერსონაჟები და ჩაეფლეთ თავგადასავალში. პირველი სერია გვიჩვენებს, თუ როგორ იწყება ყველაფერი და რა გამოწვევების წინაშე დგებიან გმირები.
+                </p>
+                <a href="cinema2.html" class="watch-btn">ყურება</a>
+            </div>
+            <div class="coming-soon">სხვა ეპიზოდები დაემატება მალე...</div>
         </div>
 
-        <div class="footer">© 2026 NIKUSHA PREMIUM ENTERTAINMENT</div>
+        <div class="season-section">
+            <div class="season-title">სეზონი 5</div>
+            
+            <div class="episode-card">
+                <div class="episode-header">
+                    <span class="episode-name">🔴 ეპიზოდი 4: დათარსულები</span>
+                </div>
+                <p class="episode-desc">
+                    მოვლენები პიკს აღწევს. მეხუთე სეზონის მეოთხე სერიაში გმირებს მოულოდნელი წინააღმდეგობები ელოდებათ. ნახეთ, როგორ გაგრძელდება მათი ისტორია.
+                </p>
+                <a href="cinema.html" class="watch-btn">ყურება</a>
+            </div>
+            <div class="coming-soon">ახალი სერიები გზაშია...</div>
+        </div>
+
     </div>
+
+    <footer style="text-align: center; padding: 20px; color: #444; border-top: 1px solid #111;">
+        © 2026 NIKUSHA PREMIUM ENTERTAINMENT
+    </footer>
 
 </body>
 </html>
