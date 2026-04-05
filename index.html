@@ -3,57 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIKADRY TV | სერიალები</title>
+    <title>NIKADRY TV | მთავარი</title>
     <style>
-        body { margin: 0; background: #000; color: white; font-family: 'Segoe UI', sans-serif; padding-bottom: 50px; }
-        header { background: #e50914; padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4); }
-        h1 { margin: 0; font-size: clamp(24px, 5vw, 40px); text-transform: uppercase; letter-spacing: 4px; font-weight: 900; }
+        /* მთავარი სტილი */
+        body { 
+            margin: 0; 
+            background: #000; 
+            color: white; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            padding-bottom: 50px; 
+        }
         
-        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-        
-        .season-section { margin-bottom: 50px; }
+        header { 
+            background: linear-gradient(to bottom, #111 0%, #000 100%);
+            padding: 30px; 
+            text-align: center; 
+            border-bottom: 3px solid #e50914;
+            box-shadow: 0 4px 20px rgba(229, 9, 20, 0.4);
+        }
+
+        h1 { 
+            margin: 0; 
+            font-size: 42px; 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+            color: #e50914;
+            text-shadow: 2px 2px 10px rgba(229, 9, 20, 0.5);
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+        }
+
+        /* სეზონის სექცია */
+        .season-section { 
+            margin-bottom: 60px; 
+        }
+
         .season-title { 
-            font-size: 28px; 
-            color: #e50914; 
-            border-left: 5px solid #e50914; 
-            padding-left: 15px; 
-            margin-bottom: 25px; 
+            font-size: 30px; 
+            color: #fff; 
+            border-left: 6px solid #e50914; 
+            padding-left: 20px; 
+            margin-bottom: 30px; 
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
+        /* ეპიზოდის ბარათი */
         .episode-card { 
-            background: #141414; 
-            border-radius: 12px; 
-            padding: 20px; 
-            margin-bottom: 20px; 
+            background: #111; 
+            border-radius: 15px; 
+            padding: 25px; 
+            margin-bottom: 25px; 
             border: 1px solid #222;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .episode-card:hover { border-color: #e50914; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(229,9,20,0.2); }
 
-        .episode-header { display: flex; justify-content: space-between; align-items: center; }
-        .episode-name { font-size: 20px; font-weight: bold; color: #fff; }
-        
-        .episode-desc { color: #999; font-size: 15px; line-height: 1.5; margin: 5px 0; }
-        
+        .episode-card:hover { 
+            border-color: #e50914; 
+            transform: translateY(-8px); 
+            box-shadow: 0 10px 25px rgba(229, 9, 20, 0.2);
+            background: #181818;
+        }
+
+        .episode-name { 
+            font-size: 22px; 
+            font-weight: bold; 
+            color: #fff; 
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .episode-desc { 
+            color: #aaa; 
+            font-size: 16px; 
+            line-height: 1.6; 
+            margin-bottom: 20px; 
+        }
+
         .watch-btn { 
-            align-self: flex-start;
-            padding: 10px 25px; 
+            display: inline-block;
+            padding: 12px 35px; 
             background: #e50914; 
             color: white; 
             text-decoration: none; 
             font-weight: bold; 
-            border-radius: 6px; 
-            font-size: 14px;
-            transition: 0.2s;
+            border-radius: 5px; 
+            font-size: 15px;
+            transition: 0.3s;
+            text-transform: uppercase;
         }
-        .watch-btn:hover { background: #b20710; transform: scale(1.05); }
 
-        .coming-soon { color: #555; font-style: italic; font-size: 14px; margin-top: 10px; }
+        .watch-btn:hover { 
+            background: #ff0f1b; 
+            box-shadow: 0 0 15px #e50914;
+            transform: scale(1.05);
+        }
+
+        .coming-soon { 
+            color: #444; 
+            font-style: italic; 
+            font-size: 14px; 
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        /* Footer / საავტორო უფლებები */
+        footer { 
+            text-align: center; 
+            padding: 60px 20px; 
+            background: #080808;
+            border-top: 1px solid #1a1a1a;
+            margin-top: 80px;
+        }
+
+        .copyright-box {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 25px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .copyright-box h3 { color: #e50914; margin-top: 0; }
+        .copyright-box p { color: #999; line-height: 1.7; font-size: 15px; }
+
+        .yt-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #fff;
+            background: #f00; /* YouTube Red */
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .yt-link:hover { background: #c00; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 28px; }
+            .season-title { font-size: 24px; }
+        }
     </style>
 </head>
 <body>
@@ -68,9 +166,7 @@
             <div class="season-title">სეზონი 1</div>
             
             <div class="episode-card">
-                <div class="episode-header">
-                    <span class="episode-name">🔵 ეპიზოდი 1: დასაწყისი</span>
-                </div>
+                <span class="episode-name">🎬 ეპიზოდი 1: დასაწყისი</span>
                 <p class="episode-desc">
                     გაიცანით პერსონაჟები და ჩაეფლეთ თავგადასავალში. პირველი სერია გვიჩვენებს, თუ როგორ იწყება ყველაფერი და რა გამოწვევების წინაშე დგებიან გმირები.
                 </p>
@@ -83,9 +179,7 @@
             <div class="season-title">სეზონი 5</div>
             
             <div class="episode-card">
-                <div class="episode-header">
-                    <span class="episode-name">🔴 ეპიზოდი 4: დათარსულები</span>
-                </div>
+                <span class="episode-name">🎬 ეპიზოდი 4: დათარსულები</span>
                 <p class="episode-desc">
                     მოვლენები პიკს აღწევს. მეხუთე სეზონის მეოთხე სერიაში გმირებს მოულოდნელი წინააღმდეგობები ელოდებათ. ნახეთ, როგორ გაგრძელდება მათი ისტორია.
                 </p>
@@ -96,8 +190,19 @@
 
     </div>
 
-    <footer style="text-align: center; padding: 20px; color: #444; border-top: 1px solid #111;">
-        © 2026 NIKUSHA PREMIUM ENTERTAINMENT
+    <footer>
+        <div class="copyright-box">
+            <h3>⚠️ საავტორო უფლებები</h3>
+            <p>
+                ეს ფილმები არ მეკუთვნის მე. საიტი შექმნილია მხოლოდ საჩვენებლად. 
+                გთხოვთ, გადახვიდეთ იუთუბზე და გამოიწეროთ შემოქმედის ოფიციალური არხი, 
+                რომ მხარი დაუჭიროთ მათ ნამუშევრებს.
+            </p>
+            <a href="https://www.youtube.com/@Datarsulebi" target="_blank" class="yt-link">
+                გადადი YouTube-ზე 🎬
+            </a>
+        </div>
+        <p style="margin-top: 40px; font-size: 13px; color: #444;">© 2026 NIKADRY TV | MADE BY NIKUSHA</p>
     </footer>
 
 </body>
