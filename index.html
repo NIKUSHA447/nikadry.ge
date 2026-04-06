@@ -5,127 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NIKADRY TV | მთავარი</title>
     <style>
-        body { 
-            margin: 0; 
-            background: #050505; 
-            color: white; 
-            font-family: 'Segoe UI', sans-serif; 
-        }
-        
-        /* ნავიგაცია */
-        nav {
-            background: #000;
-            padding: 20px 5%;
-            display: flex;
-            justify-content: center;
-            border-bottom: 2px solid #e50914;
-            position: fixed;
-            width: 90%;
-            top: 0;
-            z-index: 1000;
-        }
+        body { margin: 0; background: #050505; color: white; font-family: 'Segoe UI', sans-serif; }
+        nav { background: #000; padding: 20px 5%; display: flex; justify-content: center; border-bottom: 2px solid #e50914; position: fixed; width: 90%; top: 0; z-index: 1000; }
         .logo { color: #e50914; font-size: 28px; font-weight: bold; text-decoration: none; letter-spacing: 3px; }
-
-        /* ჰერო სექცია (დიდი სურათი ზემოთ) */
-        .hero {
-            height: 400px;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1), #050505), 
-                        url('https://raw.githubusercontent.com/nikusha447/nikadry.ge/main/image_b60daa.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 60px;
-        }
+        .hero { height: 400px; background: linear-gradient(to bottom, rgba(0,0,0,0.1), #050505), url('image_b60daa.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; margin-top: 60px; }
         .hero h1 { font-size: 50px; text-shadow: 0 0 20px #e50914; text-transform: uppercase; }
-
-        /* კატეგორიების კონტეინერი */
-        .container {
-            max-width: 1200px;
-            margin: -50px auto 50px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        /* კატეგორიის ბარათი */
-        .cat-card {
-            background: #111;
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid #222;
-            text-decoration: none;
-            transition: 0.4s;
-            position: relative;
-        }
-        .cat-card:hover {
-            transform: translateY(-10px);
-            border-color: #e50914;
-            box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3);
-        }
-        .cat-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            filter: grayscale(30%);
-            transition: 0.4s;
-        }
-        .cat-card:hover img { filter: grayscale(0%); }
-        
+        .container { max-width: 1200px; margin: -50px auto 50px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .cat-card { background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #222; text-decoration: none; transition: 0.4s; }
+        .cat-card:hover { transform: translateY(-10px); border-color: #e50914; box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3); }
+        .cat-card img { width: 100%; height: 200px; object-fit: cover; }
         .cat-info { padding: 20px; text-align: center; }
-        .cat-info h3 { margin: 0; font-size: 24px; color: #fff; }
-        .cat-info p { color: #888; font-size: 14px; margin-top: 10px; }
-
-        footer {
-            text-align: center;
-            padding: 50px;
-            background: #000;
-            border-top: 1px solid #222;
-            color: #444;
-        }
+        footer { text-align: center; padding: 50px; background: #000; border-top: 1px solid #222; color: #444; }
     </style>
 </head>
 <body>
-
-    <nav>
-        <a href="index.html" class="logo">NIKADRY TV</a>
-    </nav>
-
-    <div class="hero">
-        <h1>აირჩიე ჟანრი</h1>
-    </div>
-
+    <nav><a href="index.html" class="logo">NIKADRY TV</a></nav>
+    <div class="hero"><h1>აირჩიე ჟანრი</h1></div>
     <div class="container">
         <a href="cinema2.html" class="cat-card">
-            <img src="https://raw.githubusercontent.com/nikusha447/nikadry.ge/main/image_b59ccc.jpg" alt="დათარსულები">
-            <div class="cat-info">
-                <h3>დათარსულები</h3>
-                <p>ყველა სერია ერთად</p>
-            </div>
+            <img src="image_b59ccc.jpg" alt="დათარსულები">
+            <div class="cat-info"><h3>დათარსულები</h3><p>ყველა სერია და სეზონი</p></div>
         </a>
-
         <a href="#" class="cat-card" onclick="alert('ანიმეები მალე დაემატება!')">
             <img src="https://images.alphacoders.com/132/1327111.jpeg" alt="ანიმე">
-            <div class="cat-info">
-                <h3>ანიმეები</h3>
-                <p>ქართულად გახმოვანებული</p>
-            </div>
-        </a>
-
-        <a href="#" class="cat-card" onclick="alert('ფილმები მალე დაემატება!')">
-            <img src="https://images3.alphacoders.com/132/1322302.jpeg" alt="ფილმები">
-            <div class="cat-info">
-                <h3>ფილმები</h3>
-                <p>ბლოკბასტერები და პრემიერები</p>
-            </div>
+            <div class="cat-info"><h3>ანიმეები</h3><p>ქართულად გახმოვანებული</p></div>
         </a>
     </div>
-
-    <footer>
-        © 2026 NIKADRY TV PREMIUM | MADE BY NIKUSHA
-    </footer>
-
+    <footer>© 2026 NIKADRY TV PREMIUM | MADE BY NIKUSHA</footer>
 </body>
 </html>
