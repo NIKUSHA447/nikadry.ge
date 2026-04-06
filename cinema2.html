@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>დათარსულები - სერია 1</title>
+    <title>დათარსულები - სეზონი 1: სერია 1</title>
     <style>
         body { margin: 0; background: #0a0a0a; color: white; font-family: sans-serif; }
-        nav { background: #000; padding: 15px 5%; display: flex; justify-content: space-between; border-bottom: 1px solid #e50914; }
+        nav { background: #000; padding: 15px 5%; display: flex; justify-content: space-between; border-bottom: 1px solid #e50914; position: sticky; top: 0; z-index: 100; }
         .logo { color: #e50914; font-size: 22px; font-weight: bold; text-decoration: none; }
         .main-layout { display: flex; max-width: 1400px; margin: 20px auto; gap: 20px; padding: 0 20px; }
         .poster-side { width: 250px; flex-shrink: 0; }
-        /* პოსტერის სტილი შენი ახალი ფოტოსთვის */
         .poster-side img { width: 100%; border-radius: 10px; border: 1px solid #333; box-shadow: 0 0 15px rgba(229, 9, 20, 0.3); }
         .video-area { flex-grow: 1; }
         .video-container { background: #000; border-radius: 8px; overflow: hidden; border: 1px solid #222; margin-bottom: 20px; }
         .video-container iframe { width: 100%; aspect-ratio: 16/9; border: 0; }
-        
+        .description-box { background: #111; padding: 20px; border-radius: 8px; border: 1px solid #222; margin-bottom: 20px; }
         .sidebar { width: 300px; flex-shrink: 0; }
         .season-box { background: #111; border: 1px solid #222; border-radius: 8px; overflow: hidden; }
         .season-header { background: #e50914; padding: 12px; font-weight: bold; text-align: center; }
@@ -31,13 +30,17 @@
 <nav><a href="index.html" class="logo">NIKADRY TV</a></nav>
 <div class="main-layout">
     <div class="poster-side">
-        <img src="images (1).png" alt="Poster">
+        <img src="images.jfif" alt="დათარსულები">
         <h2 style="font-size: 20px; margin-top: 15px;">დათარსულები</h2>
-        <p style="color: #666;">სერია 1: დასაწყისი</p>
+        <p style="color: #666;">სეზონი 1 • სერია 1</p>
     </div>
     <div class="video-area">
         <div class="video-container">
             <iframe src="https://drive.google.com/file/d/1CnG8xzfdpuPVwQ8SWq2JtW9LbGu83yHc/preview" allowfullscreen></iframe>
+        </div>
+        <div class="description-box">
+            <h1 style="color: #e50914; margin-top:0; font-size: 24px;">სერია 1: დასაწყისი</h1>
+            <p>ამ ეპიზოდით იწყება "დათარსულების" თავგადასავალი. გაიცანით პერსონაჟები და ჩაერთეთ მათ ისტორიაში.</p>
         </div>
         <div class="comments-box">
             <div id="disqus_thread"></div>
@@ -47,12 +50,9 @@
         <div class="season-box">
             <div class="season-header">სეზონი 1</div>
             <div class="episode-list">
-                <a href="cinema2.html" class="episode-item active">▶ სერია 1</a>
-                <div class="episode-item" style="opacity: 0.5;">🔒 სერია 2 (მალე)</div>
-            </div>
-            <div class="season-header" style="background: #333;">სეზონი 5</div>
-            <div class="episode-list">
-                <a href="cinema.html" class="episode-item">▶ სერია 4</a>
+                <a href="cinema2.html" class="episode-item active">▶ სერია 1: დასაწყისი</a>
+                <a href="cinema3.html" class="episode-item">▶ სერია 2: მამების სიცრუე</a>
+                <div class="episode-item" style="opacity: 0.5;">🔒 სერია 3 (მალე)</div>
             </div>
         </div>
     </div>
