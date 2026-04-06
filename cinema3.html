@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>დათარსულები - სეზონი 1: სერია 2 (მამების სიცრუე)</title>
+    <style>
+        body { margin: 0; background: #0a0a0a; color: white; font-family: sans-serif; }
+        nav { background: #000; padding: 15px 5%; display: flex; justify-content: space-between; border-bottom: 1px solid #e50914; position: sticky; top: 0; z-index: 100; }
+        .logo { color: #e50914; font-size: 22px; font-weight: bold; text-decoration: none; }
+        
+        .main-layout { display: flex; max-width: 1400px; margin: 20px auto; gap: 20px; padding: 0 20px; }
+        
+        /* პოსტერის მხარე */
+        .poster-side { width: 250px; flex-shrink: 0; }
+        .poster-side img { width: 100%; border-radius: 10px; border: 1px solid #333; box-shadow: 0 0 15px rgba(229, 9, 20, 0.3); }
+        
+        /* ვიდეოს მხარე */
+        .video-area { flex-grow: 1; }
+        .video-container { background: #000; border-radius: 8px; overflow: hidden; border: 1px solid #222; margin-bottom: 20px; }
+        .video-container iframe { width: 100%; aspect-ratio: 16/9; border: 0; }
+        
+        /* ღილაკები */
+        .action-buttons { display: flex; gap: 10px; margin-bottom: 20px; }
+        .btn { padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; cursor: pointer; border: none; font-size: 14px; }
+        .btn-download { background: #e50914; color: white; }
+        .btn-download:hover { background: #b20710; }
+        
+        /* აღწერა */
+        .description-box { background: #111; padding: 20px; border-radius: 8px; border: 1px solid #222; margin-bottom: 20px; }
+        .description-box h1 { margin: 0 0 10px 0; color: #e50914; font-size: 24px; }
+        .description-box p { line-height: 1.6; color: #ccc; }
+
+        /* სერიების პანელი */
+        .sidebar { width: 300px; flex-shrink: 0; }
+        .season-box { background: #111; border: 1px solid #222; border-radius: 8px; overflow: hidden; }
+        .season-header { background: #e50914; padding: 12px; font-weight: bold; text-align: center; }
+        .episode-item { padding: 12px; border-bottom: 1px solid #222; display: flex; align-items: center; text-decoration: none; color: #ccc; transition: 0.3s; }
+        .episode-item:hover { background: #1a1a1a; color: #e50914; }
+        .episode-item.active { background: #1a1a1a; color: #e50914; border-left: 4px solid #e50914; }
+
+        @media (max-width: 1100px) { .main-layout { flex-direction: column; } .poster-side, .sidebar { width: 100%; } }
+    </style>
+</head>
+<body>
+
+<nav><a href="index.html" class="logo">NIKADRY TV</a></nav>
+
+<div class="main-layout">
+    <div class="poster-side">
+        <img src="images.jfif" alt="დათარსულები">
+        <h2 style="font-size: 20px; margin-top: 15px;">დათარსულები</h2>
+        <p style="color: #666;">სეზონი 1 • სერია 2</p>
+    </div>
+
+    <div class="video-area">
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1U5jBWd7zQeR-W3_s_RLJBiXR8zUa2VbL/preview" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://drive.google.com/file/d/1U5jBWd7zQeR-W3_s_RLJBiXR8zUa2VbL/view" target="_blank" class="btn btn-download">⬇ გადმოწერა / Drive-ზე ნახვა</a>
+        </div>
+
+        <div class="description-box">
+            <h1>სერია 2: მამების სიცრუე</h1>
+            <p>ამ ეპიზოდში მოვლენები კიდევ უფრო იხლართება. სიმართლე და სიცრუე ერთმანეთში ირევა, რაც პერსონაჟებს რთული არჩევანის წინაშე აყენებს.</p>
+            <p style="color: #888; font-size: 14px; margin-top: 10px;"><b>ხარისხი:</b> HD | <b>ენა:</b> ქართული | <b>წელი:</b> 2026</p>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="season-box">
+            <div class="season-header">სეზონი 1</div>
+            <div class="episode-list">
+                <a href="cinema2.html" class="episode-item">▶ სერია 1: დასაწყისი</a>
+                <a href="cinema3.html" class="episode-item active">▶ სერია 2: მამების სიცრუე</a>
+                <div class="episode-item" style="opacity: 0.5;">🔒 სერია 3 (მალე)</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
