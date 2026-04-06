@@ -89,11 +89,12 @@
             <script>
                 var disqus_config = function () {
                     this.page.url = window.location.href;  
-                    this.page.identifier = 'cinema2_page'; 
+                    this.page.identifier = 'cinema2_page_v1'; 
                 };
                 (function() { 
                     var d = document, s = d.createElement('script');
-                    s.src = 'https://nikadry-ge.disqus.com/embed.js'; // აქ ჩასვი შენი Disqus მოკლე სახელი
+                    // ჩასმულია შენი სწორი Shortname: nikadry-tv
+                    s.src = 'https://nikadry-tv.disqus.com/embed.js'; 
                     s.setAttribute('data-timestamp', +new Date());
                     (d.head || d.body).appendChild(s);
                 })();
