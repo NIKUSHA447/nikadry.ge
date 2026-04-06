@@ -3,109 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIKUSHA TV | დათარსულები</title>
+    <title>დათარსულები - სერია 1</title>
     <style>
-        body { margin: 0; background: #050505; color: white; font-family: sans-serif; }
+        body { margin: 0; background: #0a0a0a; color: white; font-family: sans-serif; }
+        nav { background: #000; padding: 15px 5%; display: flex; justify-content: space-between; border-bottom: 1px solid #e50914; }
+        .logo { color: #e50914; font-size: 22px; font-weight: bold; text-decoration: none; }
+        .main-layout { display: flex; max-width: 1400px; margin: 20px auto; gap: 20px; padding: 0 20px; }
+        .poster-side { width: 250px; flex-shrink: 0; }
+        .poster-side img { width: 100%; border-radius: 8px; border: 1px solid #333; }
+        .video-area { flex-grow: 1; }
+        .video-container { background: #000; border-radius: 8px; overflow: hidden; border: 1px solid #222; margin-bottom: 20px; }
+        .video-container iframe { width: 100%; aspect-ratio: 16/9; border: 0; }
         
-        /* ნავიგაცია */
-        nav { 
-            background: rgba(0,0,0,0.9); padding: 15px 5%; display: flex; 
-            justify-content: space-between; align-items: center; 
-            position: fixed; width: 90%; top: 0; z-index: 1000; border-bottom: 1px solid #222;
-        }
-        .logo { color: #e50914; font-size: 24px; font-weight: bold; text-decoration: none; text-transform: uppercase; }
-        
-        /* მთავარი კონტეინერი */
-        .main-container { max-width: 1000px; margin: 100px auto 40px; padding: 20px; }
-        
-        /* ფოტო და აღწერა */
-        .movie-header { display: flex; gap: 20px; margin-bottom: 30px; align-items: flex-start; background: #111; padding: 20px; border-radius: 12px; }
-        .movie-poster { width: 300px; border-radius: 8px; box-shadow: 0 0 15px rgba(229,9,20,0.2); }
-        .movie-details { flex: 1; }
-        .movie-title { font-size: 30px; margin: 0 0 10px; color: #fff; }
-        .movie-desc { color: #aaa; line-height: 1.6; font-size: 15px; }
-
-        /* ვიდეო */
-        .video-wrapper { 
-            position: relative; padding-bottom: 56.25%; height: 0; 
-            border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
-            background: #000; border: 1px solid #222;
-        }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-
-        /* ღილაკები */
-        .actions { margin: 20px 0; display: flex; gap: 15px; }
-        .btn { padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; cursor: pointer; border: none; }
-        .btn-download { background: #e50914; color: white; }
-        .btn-download:hover { background: #ff0f1b; transform: scale(1.05); }
-        .btn-back { background: #333; color: white; }
-
-        /* კომენტარები */
-        .comments-section { background: #111; padding: 30px; border-radius: 12px; margin-top: 40px; }
-        
-        @media (max-width: 768px) {
-            .movie-header { flex-direction: column; align-items: center; text-align: center; }
-            .movie-poster { width: 100%; }
-            nav { width: 90%; }
-        }
+        /* სერიების პანელი */
+        .sidebar { width: 300px; flex-shrink: 0; }
+        .season-box { background: #111; border: 1px solid #222; border-radius: 8px; overflow: hidden; }
+        .season-header { background: #e50914; padding: 12px; font-weight: bold; text-align: center; }
+        .episode-list { max-height: 400px; overflow-y: auto; }
+        .episode-item { padding: 12px; border-bottom: 1px solid #222; display: flex; align-items: center; text-decoration: none; color: #ccc; transition: 0.3s; }
+        .episode-item:hover { background: #1a1a1a; color: #e50914; }
+        .episode-item.active { background: #1a1a1a; color: #e50914; border-left: 4px solid #e50914; }
+        .comments-box { background: #111; padding: 20px; border-radius: 8px; margin-top: 20px; }
+        @media (max-width: 1100px) { .main-layout { flex-direction: column; } .poster-side, .sidebar { width: 100%; } }
     </style>
 </head>
 <body>
-
-    <nav>
-        <a href="index.html" class="logo">NIKUSHA TV</a>
-        <a href="https://drive.google.com/uc?export=download&id=1CnG8xzfdpuPVwQ8SWq2JtW9LbGu83yHc" target="_blank" class="btn btn-download">📥 გადმოწერა</a>
-    </nav>
-
-    <div class="main-container">
-        
-        <div class="movie-header">
-            <img src="https://raw.githubusercontent.com/nikusha447/nikadry.ge/main/image_b59ccc.jpg" alt="Poster" class="movie-poster">
-            <div class="movie-details">
-                <h1 class="movie-title">დათარსულები - სერია №1</h1>
-                <p class="movie-desc">
-                    უყურეთ "დათარსულების" პირველ სერიას ექსკლუზიურად. გაიცანით გმირები და ჩაერთეთ მათ თავგადასავალში. 
-                    ხარისხი: HD | წელი: 2026 | ჟანრი: კომედია, ანიმაცია.
-                </p>
-                <div class="actions">
-                    <a href="index.html" class="btn btn-back">⬅ უკან</a>
-                </div>
+<nav><a href="index.html" class="logo">NIKADRY TV</a></nav>
+<div class="main-layout">
+    <div class="poster-side">
+        <img src="image_b59ccc.jpg" alt="Poster">
+        <h2 style="font-size: 20px;">დათარსულები</h2>
+        <p style="color: #666;">სერია 1: დასაწყისი</p>
+    </div>
+    <div class="video-area">
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1CnG8xzfdpuPVwQ8SWq2JtW9LbGu83yHc/preview" allowfullscreen></iframe>
+        </div>
+        <div class="comments-box">
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="season-box">
+            <div class="season-header">სეზონი 1</div>
+            <div class="episode-list">
+                <a href="cinema2.html" class="episode-item active">▶ სერია 1</a>
+                <div class="episode-item" style="opacity: 0.5;">🔒 სერია 2 (მალე)</div>
+            </div>
+            <div class="season-header" style="background: #333;">სეზონი 5</div>
+            <div class="episode-list">
+                <a href="cinema.html" class="episode-item">▶ სერია 4</a>
             </div>
         </div>
-
-        <div class="video-wrapper">
-            <iframe 
-                src="https://drive.google.com/file/d/1CnG8xzfdpuPVwQ8SWq2JtW9LbGu83yHc/preview" 
-                allow="autoplay; fullscreen" 
-                allowfullscreen="true" 
-                webkitallowfullscreen="true" 
-                mozallowfullscreen="true">
-            </iframe>
-        </div>
-
-        <div class="comments-section">
-            <h3>💬 კომენტარები</h3>
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    this.page.url = window.location.href;  
-                    this.page.identifier = 'cinema2_page_v1'; 
-                };
-                (function() { 
-                    var d = document, s = d.createElement('script');
-                    // ჩასმულია შენი სწორი Shortname: nikadry-tv
-                    s.src = 'https://nikadry-tv.disqus.com/embed.js'; 
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-        </div>
-
     </div>
-
-    <footer style="text-align: center; padding: 40px; color: #444; font-size: 13px;">
-        © 2026 NIKUSHA TV PREMIUM
-    </footer>
-
+</div>
+<script>
+    var disqus_config = function () { this.page.url = window.location.href; this.page.identifier = 'cinema2_s1e1'; };
+    (function() { var d = document, s = d.createElement('script'); s.src = 'https://nikadry-tv.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();
+</script>
 </body>
 </html>
