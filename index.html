@@ -9,7 +9,6 @@
         nav { background: #000; padding: 20px 5%; display: flex; justify-content: center; border-bottom: 2px solid #e50914; position: fixed; width: 100%; top: 0; z-index: 1000; box-sizing: border-box; }
         .logo { color: #e50914; font-size: 28px; font-weight: bold; text-decoration: none; letter-spacing: 3px; }
         
-        /* აქ ჩაჯდა შენი ანიმე ფონი */
         .hero { 
             height: 400px; 
             background: linear-gradient(to bottom, rgba(0,0,0,0.3), #050505), 
@@ -17,31 +16,58 @@
             background-size: cover; 
             background-position: center; 
             display: flex; 
+            flex-direction: column;
             align-items: center; 
             justify-content: center; 
             margin-top: 60px; 
         }
         
-        .hero h1 { font-size: 50px; text-shadow: 0 0 20px #e50914; text-transform: uppercase; text-align: center; }
+        .hero h1 { font-size: 50px; text-shadow: 0 0 20px #e50914; text-transform: uppercase; text-align: center; margin-bottom: 10px; }
+        
+        /* იუთუბის ღილაკის სტილი */
+        .yt-btn {
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+        .yt-btn:hover { transform: scale(1.05); background: #cc0000; }
+
         .container { max-width: 1200px; margin: -50px auto 50px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .cat-card { background: #111; border-radius: 15px; overflow: hidden; border: 1px solid #222; text-decoration: none; transition: 0.4s; }
         .cat-card:hover { transform: translateY(-10px); border-color: #e50914; box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3); }
         .cat-card img { width: 100%; height: 200px; object-fit: cover; }
         .cat-info { padding: 20px; text-align: center; }
+        .cat-info p { font-size: 14px; color: #aaa; }
+        .credit-text { font-size: 12px; color: #ff4d4d; margin-top: 5px; font-style: italic; }
+
         footer { text-align: center; padding: 50px; background: #000; border-top: 1px solid #222; color: #444; }
     </style>
 </head>
 <body>
     <nav><a href="index.html" class="logo">NIKADRY TV</a></nav>
     
-    <div class="hero"><h1>აირჩიე ჟანრი</h1></div>
+    <div class="hero">
+        <h1>აირჩიე ჟანრი</h1>
+        <a href="https://www.youtube.com/@shemoqmedi" target="_blank" class="yt-btn">
+            ▶ გამოიწერეთ @shemoqmedi
+        </a>
+    </div>
     
     <div class="container">
         <a href="cinema2.html" class="cat-card">
-            <img src="images.png" alt="დათარსულები">
+            <img src="images.jfif" alt="დათარსულები">
             <div class="cat-info">
                 <h3>დათარსულები</h3>
                 <p>ყველა სერია და სეზონი</p>
+                <div class="credit-text">ეს ანიმაცია მე არ მეკუთვნის</div>
             </div>
         </a>
 
@@ -54,7 +80,7 @@
         </a>
 
         <a href="#" class="cat-card" onclick="alert('ფილმები მალე დაემატება!')">
-            <img src="images.jfif" alt="ფილმები">
+            <img src="images.png" alt="ფილმები">
             <div class="cat-info">
                 <h3>ფილმები</h3>
                 <p>ბლოკბასტერები და პრემიერები</p>
