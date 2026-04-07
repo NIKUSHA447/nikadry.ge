@@ -2,34 +2,52 @@
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AOT - სერია 1</title>
     <style>
-        body { background-color: #000; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 0; }
-        .header { padding: 20px; background: #141414; }
-        .video-container { width: 95%; max-width: 1000px; margin: 20px auto; border: 3px solid #e50914; border-radius: 10px; overflow: hidden; box-shadow: 0 0 30px rgba(229, 9, 20, 0.3); }
-        video { width: 100%; height: auto; max-height: 560px; outline: none; }
+        body { background-color: #000; color: white; font-family: sans-serif; text-align: center; margin: 0; padding: 0; overflow-x: hidden; }
+        .header { padding: 15px; background: #141414; border-bottom: 1px solid #333; }
+        .video-container { width: 100%; max-width: 900px; margin: 10px auto; background: #000; line-height: 0; }
+        video { width: 100%; height: auto; max-height: 80vh; outline: none; background: #000; }
         .info { padding: 20px; color: #ccc; }
-        .back-btn { color: #e50914; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
+        .back-btn { color: #e50914; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-block; margin-top: 10px; }
+        
+        /* სუბტიტრების სტილი (რომ ტელეფონზე კარგად გამოჩნდეს) */
+        video::cue {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h2>Attack on Titan - სერია 1 (ქართულად)</h2>
+        <h3>Attack on Titan - სერია 1</h3>
     </div>
 
     <div class="video-container">
-        <video controls crossorigin="anonymous">
+        <video controls playsinline webkit-playsinline crossorigin="anonymous">
             <source src="https://drive.google.com/uc?export=download&id=1Dir1V5pFhhIGaNAewWUEwWv2otdbpuxA" type="video/mp4">
             
             <track src="titan1.vtt" kind="subtitles" srclang="ka" label="ქართული" default>
             
-            თქვენს ბრაუზერს არ აქვს ვიდეოს მხარდაჭერა.
+            თქვენს ბრაუზერს არ აქვს მხარდაჭერა.
         </video>
     </div>
 
     <div class="info">
-        <p>⚠️ სუბტიტრები ჩაიტვირთება ავტომატურად GitHub-იდან.</p>
-        <a href="aot_main.html" class="back-btn">← სერიების სიაში დაბრუნება</a>
+        <a href="aot_main.html" class="back-btn">← სერიების სია</a>
     </div>
+
+    <script>
+        // ავტომატურად ვცდილობთ სუბტიტრების გააქტიურებას
+        const video = document.querySelector('video');
+        video.addEventListener('loadedmetadata', () => {
+            const tracks = video.textTracks;
+            if (tracks.length > 0) {
+                tracks[0].mode = 'showing';
+            }
+        });
+    </script>
 </body>
 </html>
