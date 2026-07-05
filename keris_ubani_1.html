@@ -35,7 +35,7 @@
             border-radius: 10px;
             overflow: hidden;
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 ეკრანის ფორმატი */
+            padding-bottom: 56.25%;
             height: 0;
         }
         .player-wrapper iframe {
@@ -46,21 +46,25 @@
             height: 100%;
             border: none;
         }
-        .btn-back {
+        .navigation-buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .btn {
             display: inline-block;
-            background-color: #e50914;
             color: white;
             padding: 12px 25px;
             text-decoration: none;
             border-radius: 30px;
-            margin-top: 30px;
             font-weight: bold;
             transition: 0.3s;
         }
-        .btn-back:hover {
-            transform: scale(1.05);
-            background-color: #cc0000;
-        }
+        .btn-back { background-color: #333; }
+        .btn-back:hover { background-color: #444; transform: scale(1.05); }
+        .btn-next { background-color: #e50914; }
+        .btn-next:hover { background-color: #cc0000; transform: scale(1.05); }
     </style>
 </head>
 <body>
@@ -73,8 +77,10 @@
         <iframe src="https://www.youtube.com/embed/AWdICjXe7xU?si=3R6H4fvFBjVVzQNG" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
-    <br>
-    <a href="index.html" class="btn-back">🔙 მთავარ გვერდზე დაბრუნება</a>
+    <div class="navigation-buttons">
+        <a href="index.html" class="btn btn-back">🔙 მთავარი</a>
+        <a href="keris_ubani_2.html" class="btn btn-next">შემდეგი სერია ➡️</a>
+    </div>
 
     <script type='text/javascript' src='//pl29087643.profitablecpmratenetwork.com/d2/77/82/d27782c5a82d4164a4d8d848a27fc52f.js'></script>
 
